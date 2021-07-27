@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { ThemeContext } from "./themes-context";
+import React from "react";
+import { ThemeContext } from "./themes-context.js";
 
-class ThemeButton extends Component {
+class ThemedButton extends React.Component {
   render() {
     console.log(this.context);
     return (
@@ -12,11 +12,11 @@ class ThemeButton extends Component {
           backgroundColor: this.context.background,
           color: this.context.fontColor,
         }}
-      />
+      ></button>
     );
   }
 }
 
-ThemeButton.contextType = ThemeContext;
+ThemedButton.contextType = ThemeContext;
 
-export default ThemeButton;
+export default ThemedButton;
