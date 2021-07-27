@@ -29,4 +29,3 @@ export const store = createStore(counterReducer);
 // store.dispatch(increment());
 
 // console.log(store.getState());
-export const store = createStore(counterReducer);
