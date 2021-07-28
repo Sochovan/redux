@@ -1,17 +1,10 @@
 import { SET_USER, REMOVE_USER } from "./user.actions.js";
 
-const initialState = {
-  usersList: [],
-};
-
-const usersReducer = (state = initialState, action) => {
+const usersReducer = (state = null, action) => {
   switch (action.type) {
-    case SET_USER: {
-      return {
-        ...state,
-        usersList: state.usersList.concat(action.payload.userData),
-      };
-    }
+    case SET_USER:
+      return action.payload.userData;
+
     case REMOVE_USER:
       return null;
 
