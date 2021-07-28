@@ -1,4 +1,4 @@
-import { SET_USER, REMOVE_USER } from "./users.actions.js";
+import { SET_USER, REMOVE_USER } from "./user.actions.js";
 
 const initialState = {
   usersList: [],

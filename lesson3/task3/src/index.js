@@ -1,6 +1,6 @@
 import store from "./store.js";
 import { setLanguage } from "./language.actions.js";
-import { setUser, removeUser } from "./users.actions.js";
+import { setUser, removeUser } from "./user.actions.js";
 import { addProduct, removeProduct } from "./cart.actions.js";
 // const onAdd = () => {
 //   store.dispatch(addUser({ id: 77, name: "Nastya" }));
