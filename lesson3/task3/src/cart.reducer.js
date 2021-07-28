@@ -6,13 +6,13 @@ const initialState = {
 
 export const productReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_PRODUCT: {
+    case ADD_PRODUCT:
       return {
         ...state,
-        productsList: state.productsList.concat(action.payload),
+        productsList: state.productsList.concat(action.payload.productData),
       };
-    }
-    case REMOVE_PRODUCT: {
+
+    case REMOVE_PRODUCT:
       const newProductsList = state.productsList.filter(
         (product) => product.id !== action.payload.productId
       );
@@ -20,7 +20,7 @@ export const productReducer = (state = initialState, action) => {
         ...state,
         productsList: newProductsList,
       };
-    }
+
     default:
       return state;
   }

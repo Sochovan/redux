@@ -5,7 +5,7 @@ import usersReducer from "./user.reducer.js";
 
 const appReducer = combineReducers({
   language: languageReducer,
-  users: usersReducer,
+  user: usersReducer,
   cart: productReducer,
 });
 

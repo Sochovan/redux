@@ -2,13 +2,7 @@ import store from "./store.js";
 import { setLanguage } from "./language.actions.js";
 import { setUser, removeUser } from "./user.actions.js";
 import { addProduct, removeProduct } from "./cart.actions.js";
-// const onAdd = () => {
-//   store.dispatch(addUser({ id: 77, name: "Nastya" }));
-// };
 
-// const onDelete = () => {
-//   store.dispatch(deleteUser(77));
-// };
 
 store.subscribe(() => {
   console.log(store.getState());
