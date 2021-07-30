@@ -9,12 +9,14 @@ import {
 } from "./users.selectors.js";
 
 class UsersList extends React.Component {
-  handleChange = (text) => {
-    this.props.onChangeText(text);
+  handleChange = (event) => {
+    this.props.onChangeText(event.target.value);
   };
 
   render() {
+    console.log(this.props.users);
     const { usersList, filterText } = this.props.users;
+
     return (
       <div>
         <Filter
@@ -33,6 +35,7 @@ class UsersList extends React.Component {
 }
 
 const mapState = (state) => {
+  debugger;
   return {
     users: {
       filterText: filterTextSelector(state),
