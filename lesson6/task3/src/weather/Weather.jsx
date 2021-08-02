@@ -4,9 +4,9 @@ import { connect } from "react-redux";
 import { weatherDataSelector } from "./weather.selectors.js";
 import { useEffect } from "react";
 
-const Weather = ({ weatherData, fetchWeatherData }) => {
+const Weather = ({ weatherData, getWeatherData }) => {
   useEffect(() => {
-    fetchWeatherData();
+    getWeatherData();
   }, []);
 
   return (
@@ -30,7 +30,7 @@ const mapState = (state) => {
   };
 };
 const mapDispatch = {
-  fetchWeatherData: weatherActions.fetchWeatherData,
+  getWeatherData: weatherActions.getWeatherData,
 };
 
 export default connect(mapState, mapDispatch)(Weather);
